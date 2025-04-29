@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/trangChuFragment">
+
+    <fragment
+        android:id="@+id/trangChuFragment"
+        android:name="com.example.ungdungdatdoanonlinenhvietkitchensg.Fragment.TrangChuFragment"
+        android:label="fragment_trang_chu"
+        tools:layout="@layout/fragment_trang_chu">
+        <action
+            android:id="@+id/action_trangChuFragment_to_timKiemFragment"
+            app:destination="@id/timKiemFragment"
+            app:popUpTo="@id/trangChuFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gioHangFragment"
+        android:name="com.example.ungdungdatdoanonlinenhvietkitchensg.Fragment.GioHangFragment"
+        android:label="fragment_gio_hang"
+        tools:layout="@layout/fragment_gio_hang" />
+
+    <fragment
+        android:id="@+id/lichSuFragment"
+        android:name="com.example.ungdungdatdoanonlinenhvietkitchensg.Fragment.LichSuFragment">
+        <action
+            android:id="@+id/action_lichSuFragment_to_gioHangFragment"
+            app:destination="@id/gioHangFragment"
+            app:popUpTo="@id/trangChuFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/timKiemFragment"
+        android:name="com.example.ungdungdatdoanonlinenhvietkitchensg.Fragment.TimKiemFragment"
+        android:label="fragment_tim_kiem"
+        tools:layout="@layout/fragment_tim_kiem">
+        <action
+            android:id="@+id/action_timKiemFragment_to_gioHangFragment"
+            app:destination="@id/gioHangFragment"
+            app:popUpTo="@id/trangChuFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/trangThongTinNguoiDungFragment"
+        android:name="com.example.ungdungdatdoanonlinenhvietkitchensg.Fragment.TrangThongTinNguoiDungFragment"
+        android:label="fragment_trang_thong_tin_nguoi_dung"
+        tools:layout="@layout/fragment_trang_thong_tin_nguoi_dung" />
+</navigation>

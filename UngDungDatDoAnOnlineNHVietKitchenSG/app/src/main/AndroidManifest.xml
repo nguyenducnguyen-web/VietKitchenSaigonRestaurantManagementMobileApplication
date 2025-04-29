@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.UngDungDatDoAnOnlineNHVietKitchenSG"
+        tools:targetApi="35">
+        <activity
+            android:name=".Admin.QuanLyDatBanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NguoiDung.DatBanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.QuanLyNguoiDungActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.CapNhatThongTinMonAnActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.QuanLyDonHangActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NguoiDung.DonHangBiHuyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NguoiDung.DonHangGanDayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.DangNhapAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.XuLyDonHangAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.TrangThongTinAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.TrangThaiGiaoHangActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.QuanLyDanhSachMonAnAllItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.ThemMonAnActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NguoiDung.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NguoiDung.LienHeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NguoiDung.EmailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NguoiDung.ThongTinMonAnActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NguoiDung.ThanhToanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.AdminMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NguoiDung.ChonDiaDiemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NguoiDung.DangNhapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NguoiDung.DangKyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NguoiDung.BatDau"
+            android:exported="false" />
+        <activity
+            android:name=".NguoiDung.ManHinhKhoiDong"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

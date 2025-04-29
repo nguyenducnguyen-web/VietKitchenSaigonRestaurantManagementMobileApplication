@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".NguoiDung.ThanhToanActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/textColor"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/baseline_keyboard_double_arrow_left_24" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Đơn hàng"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+
+        <!-- Thông tin cơ bản -->
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/profileedittextshape"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="8dp"
+                android:text="Họ và tên"
+                android:textStyle="bold|italic" />
+
+            <EditText
+                android:id="@+id/edtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:outlineSpotShadowColor="@color/textColor"
+                android:background="@drawable/edit_text_background"
+                android:elevation="5dp"
+                android:ems="10"
+                android:inputType="text|textMultiLine"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/profileedittextshape"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="8dp"
+                android:text="Địa chỉ"
+                android:textStyle="bold|italic" />
+
+            <EditText
+                android:id="@+id/edtAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:outlineSpotShadowColor="@color/textColor"
+                android:textStyle="italic"
+                android:background="@drawable/edit_text_background"
+                android:elevation="5dp"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/profileedittextshape"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="8dp"
+                android:text="Điện thoại"
+                android:textStyle="bold|italic" />
+
+            <EditText
+                android:id="@+id/edtPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:outlineSpotShadowColor="@color/textColor"
+                android:background="@drawable/edit_text_background"
+                android:elevation="5dp"
+                android:ems="10"
+                android:inputType="number"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+        <!-- Phương thức thanh toán -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/profileedittextshape"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="8dp"
+                android:text="Phương thức thanh toán"
+                android:textStyle="bold|italic" />
+
+            <Spinner
+                android:id="@+id/spinnerPhuongThucThanhToan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <!-- Các trường liên quan đến thẻ tín dụng -->
+        <LinearLayout
+            android:id="@+id/creditCardFields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"> <!-- Mặc định ẩn -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/profileedittextshape"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="8dp"
+                    android:text="Tên chủ thẻ"
+                    android:textStyle="bold|italic" />
+
+                <EditText
+                    android:id="@+id/edtTenChuThe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:outlineSpotShadowColor="@color/textColor"
+                    android:background="@drawable/edit_text_background"
+                    android:elevation="5dp"
+                    android:ems="10"
+                    android:gravity="end"
+                    android:inputType="text|textMultiLine"
+                    android:paddingEnd="32dp"
+                    android:textColor="@color/textColor"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/profileedittextshape"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="8dp"
+                    android:text="Số thẻ"
+                    android:textStyle="bold|italic" />
+
+                <EditText
+                    android:id="@+id/edtSoThe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:outlineSpotShadowColor="@color/textColor"
+                    android:background="@drawable/edit_text_background"
+                    android:elevation="5dp"
+                    android:ems="10"
+                    android:gravity="end"
+                    android:inputType="number"
+                    android:paddingEnd="32dp"
+                    android:textColor="@color/textColor"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/profileedittextshape"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="8dp"
+                    android:text="Ngày hết hạn"
+                    android:textStyle="bold|italic" />
+
+                <EditText
+                    android:id="@+id/edtNgayHetHan"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:outlineSpotShadowColor="@color/textColor"
+                    android:background="@drawable/edit_text_background"
+                    android:elevation="5dp"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:gravity="end"
+                    android:paddingEnd="32dp"
+                    android:textColor="@color/textColor"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnChonNgay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/maubutton"
+                    android:text="Chọn ngày"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold|italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/profileedittextshape"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="8dp"
+                    android:text="CvvNo"
+                    android:textStyle="bold|italic" />
+
+                <EditText
+                    android:id="@+id/edtCVVNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:outlineSpotShadowColor="@color/textColor"
+                    android:background="@drawable/edit_text_background"
+                    android:elevation="5dp"
+                    android:ems="10"
+                    android:gravity="end"
+                    android:inputType="number"
+                    android:paddingEnd="32dp"
+                    android:textColor="@color/textColor"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <!-- Tổng tiền -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/profileedittextshape"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="8dp"
+                android:text="Tổng tiền"
+                android:textStyle="bold|italic" />
+
+            <EditText
+                android:id="@+id/edtTongTien"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:outlineSpotShadowColor="@color/textColor"
+                android:background="@drawable/edit_text_background"
+                android:elevation="5dp"
+                android:editable="false"
+                android:ems="10"
+                android:enabled="false"
+                android:gravity="end"
+                android:inputType="none"
+                android:paddingEnd="32dp"
+                android:textColor="@color/textColor"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/PlaceMyOrder"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/maubutton"
+        android:text="Đặt hàng"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+</FrameLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".Admin.DangNhapAdminActivity">
+
+    <LinearLayout
+        android:layout_width="10dp"
+        android:layout_height="30dp"
+        android:orientation="vertical"></LinearLayout>
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_gravity="left"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/baseline_keyboard_double_arrow_left_24" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="29dp"
+        app:srcCompat="@drawable/img_4" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="ĐĂNG NHẬP ADMIN"
+        android:textColor="#F44336"
+        android:textSize="30sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmailOrSDT"
+        android:layout_width="327dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:hint="Nhập email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtEmailOrSDT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/email"
+            android:drawablePadding="5dp"
+            android:ems="10"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilMatKhau"
+        android:layout_width="327dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        app:endIconMode="password_toggle"
+        android:hint="Mật khẩu">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtMatKhau"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:ems="10"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDangNhap"
+        android:layout_width="169dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/maubutton"
+        android:text="Đăng nhập"
+        android:textColor="#F2FFFFFF" />
+
+</LinearLayout>

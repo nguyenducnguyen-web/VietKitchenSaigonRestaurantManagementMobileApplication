@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NguoiDung.DatBanActivity">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/backButton21"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/baseline_keyboard_double_arrow_left_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView1321"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đặt bàn"
+                android:textColor="@color/textColor"
+                android:textSize="40sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/backButton21"
+                app:layout_constraintTop_toTopOf="@+id/backButton21" />
+
+            <EditText
+                android:id="@+id/enterTenKhach"
+                android:layout_width="0dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/edit_text_background"
+                android:elevation="5dp"
+                android:hint="Nhập tên khách đặt"
+                android:inputType="text"
+                android:outlineSpotShadowColor="@color/textColor"
+                android:paddingLeft="15dp"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView1321" />
+
+            <EditText
+                android:id="@+id/enterSdt"
+                android:layout_width="0dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/edit_text_background"
+                android:elevation="5dp"
+                android:hint="Nhập số điện thoại liên hệ"
+                android:inputType="number"
+                android:outlineSpotShadowColor="@color/textColor"
+                android:paddingLeft="15dp"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="@+id/enterTenKhach"
+                app:layout_constraintStart_toStartOf="@+id/enterTenKhach"
+                app:layout_constraintTop_toBottomOf="@+id/enterTenKhach" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDatBan"
+                android:layout_width="157dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/maubutton"
+                android:text="Đặt bàn"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.448"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonChonNgay" />
+
+            <Spinner
+                android:id="@+id/spinnerSoLuongKhach"
+                android:layout_width="241dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/enterSdt" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="Số lượng khách"
+                android:textColor="@color/textColor"
+                android:textSize="16sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toStartOf="@+id/spinnerSoLuongKhach"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/enterSdt" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Thông tin đặt bàn của khách hàng"
+                android:textColor="@color/textColor"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnDatBan" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RecyclerViewDatBan"
+                android:layout_width="409dp"
+                android:layout_height="498dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                tools:listitem="@layout/item_datban" />
+
+            <EditText
+                android:id="@+id/editTextNgayDatHang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:background="@drawable/edit_text_background"
+                android:elevation="5dp"
+                android:outlineSpotShadowColor="@color/textColor"
+                android:inputType="text"
+                android:enabled="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerSoLuongKhach" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonChonNgay"
+                android:layout_width="113dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:text="Chọn ngày"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold|italic"
+                android:background="@drawable/maubutton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.389"
+                app:layout_constraintStart_toEndOf="@+id/editTextNgayDatHang"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerSoLuongKhach" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

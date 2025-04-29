@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/DonHangVuaDat19"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="15dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+
+            <!-- Trạng thái -->
+            <TextView
+                android:id="@+id/textView109"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Họ tên khách"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Tổng tiền -->
+
+            <TextView
+                android:id="@+id/SoLuongDonDaHuy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="SL"
+                android:textColor="@color/textColor"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView209"
+                app:layout_constraintTop_toBottomOf="@+id/txtSoLuongDonDaDat" />
+
+            <TextView
+                android:id="@+id/textView149"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="SĐT"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView109" />
+
+            <TextView
+                android:id="@+id/txtDiaChiKhach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="địa chỉ"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView219"
+                app:layout_constraintTop_toBottomOf="@+id/txtSoDienThoaiKhach" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCanhBao"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/maubutton"
+                android:text="Cảnh báo tài khoản"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.922"
+                app:layout_constraintStart_toEndOf="@+id/txtSoDienThoaiKhach"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.09" />
+
+            <TextView
+                android:id="@+id/txtThanhToan9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Tổng số tiền khách đã chi"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView219" />
+
+            <TextView
+                android:id="@+id/textView209"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Số lượng đơn đã huỷ"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView239" />
+
+            <TextView
+                android:id="@+id/textView219"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Địa chỉ"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView149" />
+
+            <TextView
+                android:id="@+id/textView239"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Số lượng đơn đã đặt"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtThanhToan9" />
+
+            <TextView
+                android:id="@+id/txtHoTenKhach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Họ tên"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView109"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtSoDienThoaiKhach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Sdt"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView149"
+                app:layout_constraintTop_toBottomOf="@+id/textView109" />
+
+            <TextView
+                android:id="@+id/txtTongTienKhachChi"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="tổng tiền"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/txtThanhToan9"
+                app:layout_constraintTop_toBottomOf="@+id/txtDiaChiKhach" />
+
+            <TextView
+                android:id="@+id/txtSoLuongDonDaDat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="SL"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView239"
+                app:layout_constraintTop_toBottomOf="@+id/txtTongTienKhachChi" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>
+
+

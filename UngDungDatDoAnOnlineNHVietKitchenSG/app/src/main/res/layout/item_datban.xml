@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardViewnha2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="15dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <!-- Trạng thái -->
+            <TextView
+                android:id="@+id/textView10nha2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Họ tên khách đặt"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Tổng tiền -->
+
+            <TextView
+                android:id="@+id/txtTrangThaiDatBan2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Trạng thái"
+                android:textColor="@color/textColor"
+                android:textStyle="italic"
+                app:layout_constraintStart_toEndOf="@+id/textView20nha2"
+                app:layout_constraintTop_toBottomOf="@+id/txtSoLuongKhach2" />
+
+            <TextView
+                android:id="@+id/textView14nha2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="SĐT"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView10nha2" />
+
+            <TextView
+                android:id="@+id/txtSoLuongKhach2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Số lượng khách"
+                android:textColor="@color/textColor"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView21nha2"
+                app:layout_constraintTop_toBottomOf="@+id/txtSoDienThoaiKDB2" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnHuyDatBan"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/maubutton"
+                android:text="Huỷ"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.972"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtNgayDatBanCuaKhach2" />
+
+            <TextView
+                android:id="@+id/txtNgayDatBanCuaKhach2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Ngày đặt bàn"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtTrangThaiDatBan2" />
+
+            <TextView
+                android:id="@+id/textView20nha2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Trạng thái"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView21nha2" />
+
+            <TextView
+                android:id="@+id/textView21nha2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Số lượng khách"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView14nha2" />
+
+            <TextView
+                android:id="@+id/txtHoTenKhachDatBan2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Họ tên"
+                android:textStyle="italic"
+                app:layout_constraintStart_toEndOf="@+id/textView10nha2"
+                />
+
+            <TextView
+                android:id="@+id/txtSoDienThoaiKDB2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Sdt"
+                android:textStyle="italic"
+                app:layout_constraintStart_toEndOf="@+id/textView14nha2"
+                app:layout_constraintTop_toBottomOf="@+id/textView10nha2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>
+
+
+
+
+

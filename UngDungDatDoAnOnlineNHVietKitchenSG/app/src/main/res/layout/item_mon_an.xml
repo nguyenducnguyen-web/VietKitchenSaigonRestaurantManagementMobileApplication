@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/AnhMonAnDonHang"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:src="@drawable/img_1"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/TenMonAnDonHang"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Tên món"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/GiaMonAnDonHang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giá"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_vertical" />
+
+    <TextView
+        android:id="@+id/txtSoLuongDat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SL"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="8dp" />
+
+</LinearLayout>

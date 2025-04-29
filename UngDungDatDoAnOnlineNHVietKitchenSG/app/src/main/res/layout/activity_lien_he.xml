@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurface"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".NguoiDung.LienHeActivity">
+
+        <ImageButton
+            android:id="@+id/backButtonk"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/baseline_keyboard_double_arrow_left_24"
+             />
+
+        <!-- Tiêu đề -->
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="Gửi feedback/ liên hệ đặt bàn"
+            android:textColor="@color/textColor"
+            android:textSize="34sp"
+            android:textStyle="bold|italic" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tiêu đề"
+            app:boxStrokeColor="@color/teal_700">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/titleInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Nội dung -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nội dung"
+            app:boxStrokeColor="@color/teal_700">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/contentInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:minLines="4" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Ảnh hiển thị -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/darker_gray"
+            android:contentDescription="Ảnh đã chọn"
+            android:scaleType="centerCrop" />
+
+        <!-- Tên file -->
+        <TextView
+            android:id="@+id/tvLoadFileTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvLoadFileExcel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold" />
+
+        <!-- Các nút chức năng -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLoadImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/maubutton"
+                android:text="Ảnh"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:icon="@android:drawable/ic_menu_gallery"
+                app:iconGravity="textStart" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLoadFileTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/maubutton"
+                android:text="File Txt"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:icon="@android:drawable/ic_menu_upload"
+                app:iconGravity="textStart" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLoadExcel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Excel"
+                android:background="@drawable/maubutton"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:icon="@android:drawable/ic_menu_upload"
+                app:iconGravity="textStart" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnXoa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/maubutton"
+                android:text="Delele"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:icon="@android:drawable/stat_notify_sync"
+                app:iconGravity="textStart" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/maubutton"
+                android:text="Email"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:icon="@android:drawable/ic_menu_send"
+                app:iconGravity="textStart" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLuu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lưu"
+                android:background="@drawable/maubutton"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:icon="@android:drawable/ic_menu_save"
+                app:iconGravity="textStart" />
+        </LinearLayout>
+
+        <!-- RecyclerView hiển thị danh sách -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>
