@@ -24,7 +24,8 @@ Mobile application for Viet Kitchen Saigon, developed in Kotlin using Android St
 
 ## Project details
 
-- [Link](https://drive.google.com/file/d/11XzQ_K85jeI73PJBC0SN0LgnfM9qgOnD/view?usp=sharing)
+- [Video Demo](https://drive.google.com/file/d/11XzQ_K85jeI73PJBC0SN0LgnfM9qgOnD/view?usp=sharing)
+- [Link](https://docs.google.com/document/d/1SUiZSszta2K8rR668nJ-_xBqJ7p6dgQP/edit?usp=sharing&ouid=110380848989676522612&rtpof=true&sd=true)
 
 
 
